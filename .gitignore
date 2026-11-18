@@ -1,0 +1,33 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# --- Secrets & credentials (NEVER commit) ---
+# dbt connection profiles hold Databricks tokens, hosts and warehouse paths
+profiles.yml
+**/profiles.yml
+.env
+.env.*
+*.pem
+*.key
+
+# --- dbt artifacts ---
+target/
+dbt_packages/
+logs/
+**/logs/
+.user.yml
+
+# --- Editor / OS / tooling (machine-specific) ---
+.vscode/
+.claude/
+.idea/
+.ipynb_checkpoints/
+.DS_Store

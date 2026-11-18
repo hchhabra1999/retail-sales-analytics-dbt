@@ -1,0 +1,12 @@
+target/
+dbt_packages/
+logs/
+.env
+.env.*
+
+# dbt connection profile: contains Databricks tokens, never commit
+profiles.yml
+
+# dbt anonymous usage id
+.user.yml
+.DS_Store

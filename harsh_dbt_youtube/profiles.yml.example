@@ -1,0 +1,21 @@
+# Copy this file to ~/.dbt/profiles.yml (or to ./profiles.yml) and fill in your own values.
+# The real profiles.yml is git-ignored because it holds credentials.
+harsh_dbt_youtube:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: <your-workspace>.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/<your-warehouse-id>
+      token: <your-databricks-personal-access-token>
+      catalog: dbt_tutorial_dev
+      schema: default
+      threads: 1
+    prod:
+      type: databricks
+      host: <your-workspace>.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/<your-warehouse-id>
+      token: <your-databricks-personal-access-token>
+      catalog: dbt_tutorial_prod
+      schema: default
+      threads: 1
